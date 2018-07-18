@@ -46,7 +46,6 @@
 			}
 			
 			.case_2>.parent>p{
-				display:inline-block;
 				width:100px;
 				height:100px;
 				line-height:100px;
@@ -55,12 +54,86 @@
 				box-sizing:border-box;
 			}
 			
+			/*
+				문제2) .child_1 요소에게 margin을 다음과 같이 설정
+								위로 100, 오른쪽 150, 아래 20, 왼쪽 200
+			*/
+			
 			.case_2>.parent>.child_1{
+				/*margin-top:100px;
+				margin-right:150px;
+				margin-bottom:20px;
+				margin-left:200px;
+				
+				margin:100px 150px 20px 200px;*//*약식표현법*/
+				
+				display:inline-block;
+				
+				margin:50px;/*사방이 동일한 값일 경우 약식표현법*/
+				margin:100px 70px;/*위,아래가 동일하고, 좌우가 동일한경우*/
+				margin:100px 70px 20px;/*위,아래는 다르고, 좌우만 동일한 경우*/				
+				
+				
 				background-color:yellow;
 			}
 			
 			.case_2>.parent>.child_2{
+				display:inline-block;
 				background-color:pink;
+			}
+			
+			.case_2>.parent>.child_3{
+				margin:0 0 0 50px;
+				margin-left:70px;
+				background-color:aqua;
+			}
+			
+			
+			/**************************************/
+			
+			.case_3>.parent{
+				overflow:hidden;/*넘쳐 흐르는 내용을 숨김처리*/
+				width:600px;
+				height:200px;
+				background-color:pink;
+				border:1px solid black;
+			}
+			
+			.case_3>.parent>p{
+				display:inline-block;/*블럭요소처럼 w,h 적용가능하면서 인라인처럼 나란히 ...*/
+				width:150px;
+				height:50px;
+				color:white;
+				line-height:50px;
+				text-align:center;				
+			}
+			
+			.case_3>.parent>.child_1{
+/*				margin-right:400px;*/
+				background-color:blue;
+			}
+			
+			.case_3>.parent>.child_2{
+				margin-left:400px;
+				background-color:red;
+			}
+			
+			
+			/******************************************/
+			
+			article.case_4{background-color:yellow;}
+			
+			.case_4>.auto{
+				width:200px;
+				height:80px;
+				
+				margin:0 auto;/*박스를 부모 요소를 기준으로 가로 중앙에 배치하고자 할 때 margin:0 auto 를 지정한다. auto 키워드는 좌우만 적용된다. */
+				
+				margin:100px auto 0;/*좌우로 auto, 아래로 100px*/
+				
+				line-height:80px;
+				text-align:center;
+				background-color:darkmagenta;
 			}
 			
     </style>
@@ -102,6 +175,11 @@
 		<article class="case_2">
 			<h3>2. 형제관계의 margin</h3>
 			
+			<ol>
+				<li>오른쪽, 아래 방향은 형제요소를 밀어낸다.</li>
+				<li>왼쪽, 위쪽 방향은 margin을 적용한 요소가 밀려난다.</li>
+			</ol>
+			
 			<p>
 				margin은 요소 자신을 움직이고 싶을 때 사용한다.
 				또는 요소와 요소간의 간격을 떨어뜨리고 싶을 때 사용한다.
@@ -109,8 +187,31 @@
 			
 			<div class="parent">
 				<p class="child_1">자식1</p><p class="child_2">자식2</p>
+				<p class="child_3">자식3</p>
 			</div>
 			
+		</article>
+		
+		<hr>
+		
+		<article class="case_3">
+			
+				<h3>3. 부모의 폭과 margin의 관계</h3>
+				
+				<div class="parent">
+					<p class="child_1">자식1</p><p class="child_2">자식2</p>
+				</div>
+			
+			
+		</article>
+		
+		<hr>
+		
+		<article class="case_4">
+		
+			<h3>4. 가로 중앙으로 배치하는 auto 키워드</h3>
+			
+			<p class="auto">가로중앙박스</p>
 		</article>
 	
 	</section>
