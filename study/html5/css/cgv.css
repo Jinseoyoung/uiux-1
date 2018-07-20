@@ -6,6 +6,8 @@ body{
 	background-color:#fdfcf0;
 }
 
+
+
 #wrap{
 	width:1000px;
 	margin:0 auto;
@@ -47,6 +49,14 @@ section>.guide>h3{
 	color:#764d25;
 	font-size:13px;
 	text-indent:30px;/*	margin-left도 같은결과*/
+	
+	/* 질문) height와 line-height를 꼭 같이 써야 하는가? 
+		꼭 그렇지는 않다. 같이 쓰지 않아도 된다.
+	
+		outline:1px solid red;
+		height:100px;
+		line-height:100px;
+	*/
 }
 
 section>.guide>ul{margin-left:30px;}
@@ -74,13 +84,39 @@ section>.contact>h3{
 
 section>.contact>div{
 	margin:0 15px 20px 15px;
+	margin:0 15px 20px;
+	padding:20px 0 20px 20px;
 	border:1px solid #e1ddd3;
 }
-section>.contact>div>ul{}
-section>.contact>div>ul>li{}
-section>.contact>div>p{}
 
+section>.contact>div>ul{
+}
 
+/* 
+	문맥선택자는 자손을 선택할 때 사용하는데 한칸공백으로 표현한다.
+	주의: 선택시 중복되는 요소를 반드시 확인하며 신중히 , 문제가 없다는 것이 확실할때 사용한다.
+*/
+section>.contact li{
+	height:18px;
+	line-height:18px;
+}
+
+section>.contact>div>p{
+	margin-top:20px;
+	font-weight:600px;
+}
+
+section>.contact>p{
+
+	margin-top:20px;/*h3{mb:20}와 마진통합현상 발생하므로 의미 없음*/
+	margin-right:15px;
+	margin-bottom:20px;
+	margin-left:15px;
+	
+	padding:20px 0 20px 20px;
+	line-height:18px;
+	border:1px solid #e1ddd3;
+}
 
 
 /*푸터영역*/
