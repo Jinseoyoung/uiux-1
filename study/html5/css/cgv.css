@@ -63,8 +63,22 @@ section>.guide>ul>li>span{
 
 
 section>.contact{
-	
+	margin-top:30px;
 }
+
+section>.contact>h3{
+	margin-bottom:20px;
+	font-size:13px;
+	text-indent:30px;
+}
+
+section>.contact>div{
+	margin:0 15px 20px 15px;
+	border:1px solid #e1ddd3;
+}
+section>.contact>div>ul{}
+section>.contact>div>ul>li{}
+section>.contact>div>p{}
 
 
 
