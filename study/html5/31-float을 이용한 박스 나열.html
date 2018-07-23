@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float을 이용한 박스 나열</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        
+			.study>li{
+				float:left;
+				width:200px;
+				height:100px;
+				line-height:100px;
+				text-align:center;
+			}
+			
+			.study>li:first-child{background-color:red;}
+			.study>li:nth-child(2){background-color:orange;}
+			.study>li:nth-child(3){background-color:yellow;}
+			.study>li:last-child{background-color:green;}
+			
+			.clearfix{clear:both;}
+			
+    </style>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="text-center">float을 이용한 박스 나열</h1>
+	
+	<ul class="study">
+		<li>HTML5</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+		<li>jQuery</li>
+	</ul>
+	
+	<!-- 
+		1. float의 끌어당기는 영향력을 차단시키는 마감재 역할
+		
+		2. float의 영향을 차단시키는 마감재 사용은 필수(반드) 
+	-->
+	<div class="clearfix"></div>
+	
+	<p>안녕</p>
+	
+	<hr>
+	
+</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
